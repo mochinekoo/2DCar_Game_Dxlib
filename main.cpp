@@ -6,6 +6,8 @@
 #include "ImGUI/imgui_impl_win32.h"
 #include "ImGUI/imgui_impl_dx11.h"
 
+#pragma comment(lib, "dxgi.lib")
+
 using namespace std;
 
 HRESULT initDxLib();
