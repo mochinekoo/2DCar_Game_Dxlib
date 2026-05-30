@@ -20,12 +20,15 @@ void Player::Update() {
 
 	Location2D nextPos = location_;
 	if (CheckHitKey(KEY_INPUT_SPACE)) {
-		vector_ = direction_;
-		nextPos = location_ + Location2D{vector_.x_, vector_.y_};
+		if (vector_.x_ < 5 && vector_.y_ < 5) {
+			vector_ = vector_ + direction_;
+		}
+		
 	}
-	else {
 
-	}
+	nextPos = location_ + Location2D{ vector_.x_, vector_.y_ };
+	vector_.x_ *= 0.99;
+	vector_.y_ *= 0.99;
 
 	if (!stage->IsCollstion(nextPos)) {
 		location_ = nextPos;
@@ -38,6 +41,8 @@ void Player::Draw() {
 	ImGui::Begin("Player");
 	ImGui::InputFloat("dirX", &direction_.x_);
 	ImGui::InputFloat("dirY", &direction_.y_);
+	ImGui::InputFloat("vecX", &vector_.x_);
+	ImGui::InputFloat("vecY", &vector_.y_);
 	ImGui::End();
 }
 
