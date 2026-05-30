@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "../framework.h"
 #include "../Scene/RootScene.h"
+#include "../ImGUI/imgui.h"
 
 
 Player::Player(const Location2D& loc)
@@ -16,12 +17,15 @@ void Player::Init() {
 }
 
 void Player::Update() {
-	static int x = 0, y = 0;
-	GetMousePoint(&x, &y);
 
-	Location2D nextPos = {};
-	nextPos.x_ = x;
-	nextPos.y_ = y;
+	Location2D nextPos = location_;
+	if (CheckHitKey(KEY_INPUT_SPACE)) {
+		vector_ = direction_;
+		nextPos = location_ + Location2D{vector_.x_, vector_.y_};
+	}
+	else {
+
+	}
 
 	if (!stage->IsCollstion(nextPos)) {
 		location_ = nextPos;
@@ -30,6 +34,11 @@ void Player::Update() {
 
 void Player::Draw() {
 	DrawCircle(location_.x_, location_.y_, PLAYER_RADIUS, GetColor(255, 0, 0));
+
+	ImGui::Begin("Player");
+	ImGui::InputFloat("dirX", &direction_.x_);
+	ImGui::InputFloat("dirY", &direction_.y_);
+	ImGui::End();
 }
 
 void Player::Release() {
