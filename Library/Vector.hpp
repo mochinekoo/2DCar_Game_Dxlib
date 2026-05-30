@@ -1,3 +1,4 @@
+#pragma once
 #include <cmath>
 
 /// <summary>
@@ -91,6 +92,85 @@ public:
 		float newY = (y_ - other.y_) * (y_ - other.y_);
 		float newZ = (z_ - other.z_) * (z_ - other.z_);
 		return sqrt(newX + newY + newZ);
+	}
+
+};
+
+
+class Vector2D {
+public:
+	float x_, y_;
+
+	Vector2D() {
+		x_ = 0;
+		y_ = 0;
+	}
+
+	Vector2D(float x, float y) {
+		x_ = x;
+		y_ = y;
+	}
+
+	float Length() const {
+		return sqrt(x_ * x_ + y_ * y_);
+	}
+
+	Vector2D Add(float x, float y) const {
+		float newX = x_ + x;
+		float newY = y_ + y;
+		return Vector2D(newX, newY);
+	}
+
+	Vector2D Add(const Vector2D& other) const {
+		return Add(other.x_, other.y_);
+	}
+
+	Vector2D operator+(const Vector2D& other) const {
+		return Add(other);
+	}
+
+	Vector2D Subtract(float x, float y) const {
+		float newX = x_ - x;
+		float newY = y_ - y;
+		return Vector2D(newX, newY);
+	}
+
+	Vector2D Subtract(const Vector2D& other) const {
+		return Subtract(other.x_, other.y_);
+	}
+
+	Vector2D operator-(const Vector2D& other) const {
+		return Subtract(other);
+	}
+
+	Vector2D Scalar(float scalar) const {
+		float newX = x_ * scalar;
+		float newY = y_ * scalar;
+		return Vector2D(newX, newY);
+	}
+
+	float Dot(const Vector2D& other) const {
+		return x_ * other.x_ + y_ * other.y_;
+	}
+
+	Vector2D Multiply(const Vector2D& other) const {
+		float newX = x_ * other.x_;
+		float newY = y_ * other.y_;
+		return Vector2D(newX, newY);
+	}
+
+	Vector2D Normalize() const {
+		float len = Length();
+		if (len == 0) {
+			return Vector2D();
+		}
+		return Vector2D(x_ / len, y_ / len);
+	}
+
+	float Distance(const Vector2D& other) const {
+		float newX = (x_ - other.x_) * (x_ - other.x_);
+		float newY = (y_ - other.y_) * (y_ - other.y_);
+		return sqrt(newX + newY);
 	}
 
 };

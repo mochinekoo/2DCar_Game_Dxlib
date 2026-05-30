@@ -1,3 +1,4 @@
+#pragma once
 #include <cmath>
 
 class Location3D {
@@ -63,5 +64,66 @@ public:
 		float newY = (y_ - other.y_) * (y_ - other.y_);
 		float newZ = (z_ - other.z_) * (z_ - other.z_);
 		return std::sqrt(newX + newY + newZ);
+	}
+};
+
+
+class Location2D {
+private:
+public:
+	float x_, y_;
+
+	Location2D() {
+		x_ = 0;
+		y_ = 0;
+	}
+
+	Location2D(float x, float y) {
+		x_ = x;
+		y_ = y;
+	}
+
+	Location2D Add(float x, float y) const {
+		float newX = x_ + x;
+		float newY = y_ + y;
+		return Location2D(newX, newY);
+	}
+
+	Location2D Add(const Location2D& other) const {
+		return Add(other.x_, other.y_);
+	}
+
+	Location2D operator+(const Location2D& other) const {
+		return Add(other);
+	}
+
+	Location2D Subtract(float x, float y) const {
+		float newX = x_ - x;
+		float newY = y_ - y;
+		return Location2D(newX, newY);
+	}
+
+	Location2D Subtract(const Location2D& other) const {
+		return Subtract(other.x_, other.y_);
+	}
+
+	Location2D operator-(const Location2D& other) const {
+		return Subtract(other);
+	}
+
+	Location2D Scalar(float scalar) const {
+		float newX = x_ * scalar;
+		float newY = y_ * scalar;
+		return Location2D(newX, newY);
+	}
+
+	Location2D operator*(float scalar) const {
+		return Scalar(scalar);
+	}
+
+	float Distance(const Location2D& other) const {
+		float newX = (x_ - other.x_) * (x_ - other.x_);
+		float newY = (y_ - other.y_) * (y_ - other.y_);
+		return std::sqrt(newX + newY);
 	}
 };
