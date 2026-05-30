@@ -1,169 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{a3720b28-5e15-4fa3-a881-7a1f8c9db5c4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Object">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="ImGUI">
+      <UniqueIdentifier>{82287d6b-fccd-4713-8927-1c371c2044e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{9baa212f-109e-4a81-b105-ce85c0410734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Root">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui\imgui.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ImGUI\imgui.cpp">
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_demo.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_draw.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_impl_dx10.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_impl_dx9.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_impl_win32.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_tables.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="imgui\imgui_widgets.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="manager\SceneManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ImGUI</Filter>
     </ClCompile>
     <ClCompile Include="object\TestObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x64-debug\cmakefiles\4.2.3-msvc3\compileridc\CMakeCCompilerId.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x64-debug\cmakefiles\4.2.3-msvc3\compileridcxx\CMakeCXXCompilerId.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x64-debug\cmakefiles\showincludes\main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x86-debug\cmakefiles\4.2.3-msvc3\compileridc\CMakeCCompilerId.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x86-debug\cmakefiles\4.2.3-msvc3\compileridcxx\CMakeCXXCompilerId.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="out\build\x86-debug\cmakefiles\showincludes\main.c">
-      <Filter>Source Files</Filter>
+      <Filter>Object</Filter>
     </ClCompile>
     <ClCompile Include="scene\RootScene.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="manager\SceneManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Root</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imconfig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx10.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx11.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx12.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx9.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_win32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_internal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_rectpack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_textedit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_truetype.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="library\Location.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="library\Matrix.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="library\Vector.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="manager\SceneManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="object\BaseObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Object</Filter>
     </ClInclude>
     <ClInclude Include="object\TestObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Object</Filter>
     </ClInclude>
-    <ClInclude Include="out\build\x64-debug\cmakefiles\showincludes\foo.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>ImGUI</Filter>
     </ClInclude>
-    <ClInclude Include="out\build\x86-debug\cmakefiles\showincludes\foo.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx9.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx10.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx12.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>ImGUI</Filter>
     </ClInclude>
     <ClInclude Include="scene\BaseScene.h">
-      <Filter>Header Files</Filter>
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="manager\SceneManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="library\Location.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="library\Matrix.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="library\Vector.hpp">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Root</Filter>
     </ClInclude>
     <ClInclude Include="scene\RootScene.h">
-      <Filter>Header Files</Filter>
+      <Filter>Scene</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="out\build\x64-debug\cmakefiles\4.2.3-msvc3\CMakeDetermineCompilerABI_C.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="out\build\x64-debug\cmakefiles\4.2.3-msvc3\CMakeDetermineCompilerABI_CXX.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="out\build\x86-debug\cmakefiles\4.2.3-msvc3\CMakeDetermineCompilerABI_C.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="out\build\x86-debug\cmakefiles\4.2.3-msvc3\CMakeDetermineCompilerABI_CXX.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="out\build\x64-debug\cmakefiles\c-plusplus_dxlib_gametemplate.dir\manifest.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="out\build\x86-debug\cmakefiles\c-plusplus_dxlib_gametemplate.dir\manifest.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>
