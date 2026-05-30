@@ -67,6 +67,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Root</Filter>
     </ClCompile>
+    <ClCompile Include="Object\Player.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Stage.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="object\BaseObject.h">
@@ -128,6 +134,15 @@
     </ClInclude>
     <ClInclude Include="scene\RootScene.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Base2DObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Stage.h">
+      <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

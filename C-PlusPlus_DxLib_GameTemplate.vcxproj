@@ -139,6 +139,8 @@
     <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="manager\SceneManager.cpp" />
+    <ClCompile Include="Object\Player.cpp" />
+    <ClCompile Include="Object\Stage.cpp" />
     <ClCompile Include="object\TestObject.cpp" />
     <ClCompile Include="scene\RootScene.cpp" />
   </ItemGroup>
@@ -159,7 +161,10 @@
     <ClInclude Include="library\Matrix.hpp" />
     <ClInclude Include="library\Vector.hpp" />
     <ClInclude Include="manager\SceneManager.h" />
+    <ClInclude Include="Object\Base2DObject.h" />
     <ClInclude Include="object\BaseObject.h" />
+    <ClInclude Include="Object\Player.h" />
+    <ClInclude Include="Object\Stage.h" />
     <ClInclude Include="object\TestObject.h" />
     <ClInclude Include="scene\BaseScene.h" />
     <ClInclude Include="scene\RootScene.h" />
