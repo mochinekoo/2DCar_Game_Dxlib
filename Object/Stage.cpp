@@ -27,9 +27,8 @@ void Stage::Release() {
 bool Stage::IsCollstion(const Location2D& loc) {
 	const float radius = CENTER_RADIUS + PLAYER_RADIUS;
 	float centerDistance = loc.Distance(Location2D{ GameScreen::WIDTH / 2, GameScreen::HEIGHT / 2});
+	bool InScreen = 0 < loc.x_ && loc.x_ < GameScreen::WIDTH
+		&& 0 < loc.y_ && loc.y_ < GameScreen::HEIGHT;
 
-	if (centerDistance <= radius) {
-		return true;
-	}
-	return false;
+	return (centerDistance <= radius) || !InScreen;
 }
