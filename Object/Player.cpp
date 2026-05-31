@@ -3,6 +3,7 @@
 #include "../framework.h"
 #include "../Scene/RootScene.h"
 #include "../ImGUI/imgui.h"
+#include "../Manager/ObjectManager.h"
 
 
 Player::Player(const Location2D& loc)
@@ -39,6 +40,7 @@ void Player::Update() {
 	vector_.x_ *= 0.99;
 	vector_.y_ *= 0.99;
 
+	Stage* stage = ObjectManager::FindObject<Stage*>();
 	if (!stage->IsCollstion(nextPos)) {
 		location_ = nextPos;
 	}

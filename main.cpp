@@ -2,6 +2,7 @@
 #include "framework.h"
 #include <assert.h>
 #include "Manager/SceneManager.h"
+#include "Manager/ObjectManager.h"
 #include "ImGUI/imgui.h"
 #include "ImGUI/imgui_impl_win32.h"
 #include "ImGUI/imgui_impl_dx11.h"
@@ -60,6 +61,7 @@ void DrawMainLoop() {
     BaseScene* currentScene = SceneManager::GetCurrentScene();
     if (currentScene != nullptr) {
         currentScene->Draw();
+        ObjectManager::UpdateManager();
     }
 
     ImGui::Begin("MainWindow");

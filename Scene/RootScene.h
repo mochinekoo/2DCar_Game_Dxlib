@@ -4,11 +4,6 @@
 #include "../Object/Stage.h"
 #include "../Object/Player.h"
 
-namespace {
-	Stage* stage;
-	Player* player;
-}
-
 class RootScene : public BaseScene {
 private:
 protected:

@@ -3,6 +3,7 @@
 #include "SceneManager.h"
 #include "../Scene/BaseScene.h"
 #include "../Scene/RootScene.h"
+#include "ObjectManager.h"
 
 namespace {
 	BaseScene* currentScene_ = nullptr;
@@ -36,7 +37,9 @@ namespace SceneManager {
 
 		//見つかった場合の処理
 		currentScene_ = scene;
+		ObjectManager::ClearObject();
 		currentScene_->Init();
+		ObjectManager::InitManager();
 
 		return -1;
 	}

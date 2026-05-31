@@ -73,6 +73,12 @@
     <ClCompile Include="Object\Stage.cpp">
       <Filter>Object</Filter>
     </ClCompile>
+    <ClCompile Include="Manager\ObjectManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\BaseObject.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="object\BaseObject.h">
@@ -143,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="Object\Stage.h">
       <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\ObjectManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
