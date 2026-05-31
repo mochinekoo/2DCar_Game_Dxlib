@@ -10,6 +10,7 @@ namespace {
 class Player : public Base2DObject {
 private:
 	float angle_;
+	int imageHandle_;
 public:
 	Player(const Location2D& loc);
 	~Player();
