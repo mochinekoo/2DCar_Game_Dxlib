@@ -173,4 +173,10 @@ public:
 		return sqrt(newX + newY);
 	}
 
+	static Vector2D FromAngle(float angle) {
+		float x = cos(angle);
+		float y = sin(angle);
+		return {x, y};
+	}
+
 };

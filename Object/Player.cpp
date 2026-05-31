@@ -8,6 +8,7 @@
 Player::Player(const Location2D& loc)
 	: Base2DObject("Player", true, loc, Vector2D{0.0f, 0.0f}) {
 	direction_ = { 1, 0 };
+	angle_ = 0;
 }
 
 Player::~Player() {
@@ -25,6 +26,14 @@ void Player::Update() {
 		}
 		
 	}
+
+	if (CheckHitKey(KEY_INPUT_LEFT)) {
+		angle_--;
+	}
+	if (CheckHitKey(KEY_INPUT_RIGHT)) {
+		angle_++;
+	}
+	direction_ = Vector2D::FromAngle(angle_);
 
 	nextPos = location_ + Location2D{ vector_.x_, vector_.y_ };
 	vector_.x_ *= 0.99;
