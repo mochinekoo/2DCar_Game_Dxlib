@@ -33,6 +33,10 @@ void Player::Update() {
 	if (!stage->IsCollstion(nextPos)) {
 		location_ = nextPos;
 	}
+	else {
+		vector_.x_ = -direction_.x_ * 3;
+		vector_.y_ = -direction_.y_ * 3;
+	}
 }
 
 void Player::Draw() {
