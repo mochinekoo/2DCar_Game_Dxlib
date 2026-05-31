@@ -1,10 +1,13 @@
 #pragma once
 #include <string>
+#include <vector>
 
+class Box2DCollider;
 class BaseObject {
 protected:
 	std::string name_;
 	bool isAlive_;
+	std::vector<Box2DCollider*> colliderList;
 public:
 	BaseObject(const std::string name, const bool isAlive);
 	~BaseObject() {};

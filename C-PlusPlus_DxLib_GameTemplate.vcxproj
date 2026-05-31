@@ -141,6 +141,7 @@
     <ClCompile Include="Manager\ObjectManager.cpp" />
     <ClCompile Include="manager\SceneManager.cpp" />
     <ClCompile Include="Object\BaseObject.cpp" />
+    <ClCompile Include="Object\Collider.cpp" />
     <ClCompile Include="Object\Player.cpp" />
     <ClCompile Include="Object\Stage.cpp" />
     <ClCompile Include="object\TestObject.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="manager\SceneManager.h" />
     <ClInclude Include="Object\Base2DObject.h" />
     <ClInclude Include="object\BaseObject.h" />
+    <ClInclude Include="Object\Collider.h" />
     <ClInclude Include="Object\Player.h" />
     <ClInclude Include="Object\Stage.h" />
     <ClInclude Include="object\TestObject.h" />

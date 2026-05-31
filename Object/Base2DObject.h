@@ -3,7 +3,7 @@
 #include "../Library/Location.hpp"
 #include "../Library/Vector.hpp"
 
-class Base2DObject : BaseObject {
+class Base2DObject : public BaseObject {
 protected:
 	Location2D location_;
 	Vector2D vector_;
@@ -23,4 +23,10 @@ public:
 	virtual void Draw() = 0;
 	virtual void Release() = 0;
 
+	Location2D GetLocation() const { return location_; }
+	void SetLocation(const Location2D& loc) { this->location_ = loc; }
+	Vector2D GetVector() const { return vector_; }
+	void SetVector(const Vector2D& vec) { this->vector_ = vec;  }
+	Vector2D GetDirection() const { return direction_; }
+	void SetDirection(const Vector2D& dir) { this->direction_ = dir; }
 };

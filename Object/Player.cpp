@@ -4,7 +4,7 @@
 #include "../Scene/RootScene.h"
 #include "../ImGUI/imgui.h"
 #include "../Manager/ObjectManager.h"
-
+#include "Collider.h"
 
 Player::Player(const Location2D& loc)
 	: Base2DObject("Player", true, loc, Vector2D{0.0f, 0.0f}) {
@@ -18,6 +18,8 @@ Player::~Player() {
 
 void Player::Init() {
 	imageHandle_ = LoadGraph("player.png");
+
+	colliderList.push_back(new Box2DCollider(this, 30.0f, 30.0f, 50.0f, 50.0f));
 }
 
 void Player::Update() {
@@ -55,6 +57,12 @@ void Player::Update() {
 void Player::Draw() {
 	// DrawCircle(location_.x_, location_.y_, PLAYER_RADIUS, GetColor(255, 0, 0));
 	DrawRotaGraph(location_.x_, location_.y_, 1.0, angle_, imageHandle_, TRUE);
+
+	for (Box2DCollider* col : colliderList) {
+		if (col == nullptr) continue;
+		col->SetShowing(true);
+		col->Draw();
+	}
 
 	ImGui::Begin("Player");
 	ImGui::InputFloat("dirX", &direction_.x_);
